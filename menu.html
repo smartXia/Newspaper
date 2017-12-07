@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/cloud.js"></script>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+		<script language="javascript">
+			$(function() {
+				//导航切换
+				$(".imglist li").click(function() {
+					$(".imglist li.selected").removeClass("selected")
+					$(this).addClass("selected");
+				})
+			})
+		</script>
+	</head>
+
+	<body style="background-color:#1c77ac; background-image:url(images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+ 
+		<div id="mainBody">
+			<div id="cloud1" class="cloud"></div>
+			<div id="cloud2" class="cloud"></div>
+		</div>
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">首页导航</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="rightinfo">
+
+			<ul class="classlist">
+
+				<li>
+					<span><img src="images/bg3.jpg" /></span>
+					<div class="lright">
+						<h2>用户在线信息完善</h2>
+						<p>介绍：<br />用户在此完成<br />基本信息填写</p>
+						<a class="enter" href="register.html">进入<i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</li>
+
+				<li>
+					<span><img src="images/bg3.jpg" /></span>
+					<div class="lright">
+						<h2>作者在线办公编辑</h2>
+						<p>介绍：<br />作者在线中<br />完成个人的作品</p>
+						<a class="enter" href="tab.html">进入<i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</li>
+
+				<li>
+					<span><img src="images/bg3.jpg" /></span>
+					<div class="lright">
+						<h2>作者在线投稿</h2>
+						<p>介绍：<br />作者在线完成<br />本地稿件投递</p>
+						<a class="enter" href="login.html">进入<i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</li>
+
+				<li>
+					<span><img src="images/bg3.jpg" /></span>
+					<div class="lright">
+						<h2>专家在线审稿</h2>
+						<p>介绍：<br />相关专家完成<br />报刊审计工作</p>
+						<a class="enter">进入<i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	
+
+	</body>
+
+</html>

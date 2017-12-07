@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/validation.js"></script>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+	</head>
+	<style>
+		body {
+			background: url(img/2.png) repeat scroll top left;
+			background-size: cover;
+			/*图片平铺*/
+		}
+		
+		.center {
+			position: relative;
+			/*left: 0;
+			top: 50%;*/
+			/*	width: 100%;*/
+			margin-top: 100px;
+			margin-bottom: 50px;
+			text-align: center;
+			font-size: 18px;
+		}
+		
+		.tijiao {
+			text-align: center;
+			/*	border: 1px solid yellow;*/
+		}
+		
+		#login {
+			width: 30%;
+			float: right;
+		}
+	</style>
+
+	<body onload="createCode()">
+		<div class="container">
+			<!--<div style="padding: 100px 350px 10px;">-->
+			<div id="login">
+				<div class="center"><strong><h3>系统登录</h3></strong></div>
+
+				<form class="bs-example bs-example-form" role="form">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="text" class="form-control" placeholder="userName">
+					</div>
+					<br>
+
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon"><i class="fa fa-lock"></i></i></span>
+						<input type="password" class="form-control" placeholder="userPwd">
+					</div>
+					<br>
+					<div class="form-group">
+						<div class="col-sm-offset-2">
+							<div class="checkbox">
+								<label>
+				             	<input type="checkbox"> 请记住我
+								</label>
+							</div>
+						</div>
+					</div>
+					<form id="form1" runat="server" onsubmit="validateCode()">
+						<div>
+
+							<div class="code" id="checkCode" onclick="createCode()"></div>
+							<div>
+								<a href="#" onclick="createCode()">看不清换一张</a>
+							</div>
+
+							<div class="input-group ">
+								<span class="input-group-addon">验证码：</span>
+								<input type="text" class="form-control" style="float:left;" type="text" id="inputCode">
+							</div>
+						</div>
+					</form>
+					<br/>
+
+					<div class="tijiao">
+						<button type="button" class="btn btn-success btn-default btn-block" id="Button1" onclick="validateCode();">Login</button>
+					</div>
+
+			</div>
+			</form>
+		</div>	
+		</div>
+		<link rel="import" href="footer.html">
+	</body>
+
+</html>
